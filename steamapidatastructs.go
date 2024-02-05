@@ -23,7 +23,7 @@ type SteamAppData struct {
 	Type                string `json:"type"`
 	Name                string `json:"name"`
 	SteamAppid          int    `json:"steam_appid"`
-	RequiredAge         int    `json:"required_age"`
+	RequiredAge         string `json:"required_age"`
 	IsFree              bool   `json:"is_free"`
 	Dlc                 []int  `json:"dlc"`
 	DetailedDescription string `json:"detailed_description"`
@@ -43,10 +43,13 @@ type SteamAppData struct {
 		Minimum     string `json:"minimum"`
 		Recommended string `json:"recommended"`
 	} `json:"mac_requirements"`
-	LinuxRequirements []interface{} `json:"linux_requirements"`
-	Developers        []string      `json:"developers"`
-	Publishers        []string      `json:"publishers"`
-	Demos             []struct {
+	LinuxRequirements struct {
+		Minimum     string `json:"minimum"`
+		Recommended string `json:"recommended"`
+	} `json:"linux_requirements"`
+	Developers []string `json:"developers"`
+	Publishers []string `json:"publishers"`
+	Demos      []struct {
 		Appid       int    `json:"appid"`
 		Description string `json:"description"`
 	} `json:"demos"`

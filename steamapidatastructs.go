@@ -20,21 +20,21 @@ type SteamAppDetailResult struct {
 
 // SteamAppData is the data returned from the Steam API
 type SteamAppData struct {
-	Type                string `json:"type"`
-	Name                string `json:"name"`
-	SteamAppid          int    `json:"steam_appid"`
-	RequiredAge         string `json:"required_age"`
-	IsFree              bool   `json:"is_free"`
-	Dlc                 []int  `json:"dlc"`
-	DetailedDescription string `json:"detailed_description"`
-	AboutTheGame        string `json:"about_the_game"`
-	ShortDescription    string `json:"short_description"`
-	SupportedLanguages  string `json:"supported_languages"`
-	Reviews             string `json:"reviews"`
-	HeaderImage         string `json:"header_image"`
-	CapsuleImage        string `json:"capsule_image"`
-	CapsuleImagev5      string `json:"capsule_imagev5"`
-	Website             string `json:"website"`
+	Type                string      `json:"type"`
+	Name                string      `json:"name"`
+	SteamAppid          int         `json:"steam_appid"`
+	RequiredAge         interface{} `json:"required_age"`
+	IsFree              bool        `json:"is_free"`
+	Dlc                 []int       `json:"dlc"`
+	DetailedDescription string      `json:"detailed_description"`
+	AboutTheGame        string      `json:"about_the_game"`
+	ShortDescription    string      `json:"short_description"`
+	SupportedLanguages  string      `json:"supported_languages"`
+	Reviews             string      `json:"reviews"`
+	HeaderImage         string      `json:"header_image"`
+	CapsuleImage        string      `json:"capsule_image"`
+	CapsuleImagev5      string      `json:"capsule_imagev5"`
+	Website             string      `json:"website"`
 	PcRequirements      struct {
 		Minimum     string `json:"minimum"`
 		Recommended string `json:"recommended"`
